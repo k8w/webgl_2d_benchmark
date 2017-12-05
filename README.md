@@ -5,6 +5,7 @@
 
 ## Pixi.js
 1. 100个256x256的纹理图片，对应了100个纹理（没有Layaair的自动和图集功能）
+1. 电脑上卡的几乎动不了
 1. 没有drawcall显示功能
 1. 优化一般，不测了，直接出局
 
@@ -12,7 +13,10 @@
 TODO
 
 ## Egret
-TODO
+1. WebGL Inspector 上也显示出100个纹理
+1. PC上跑出60帧，显示1000个Draw Call
+1. iPhone 6上22FPS，显示1000个Draw Call
+1. iPhone 6上，同样1000个Sprite，降低至50个256x256的纹理交错时，跑出60FPS，显示500个Draw Call
 
 # 测试方案
 ## 基准测试
