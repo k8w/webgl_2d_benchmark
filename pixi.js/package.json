@@ -1,0 +1,19 @@
+{
+  "name": "pixi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "@types/pixi.js": "^4.6.0",
+    "pixi.js": "^4.6.2",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "webpack-dev-server -d"
+  },
+  "author": "",
+  "license": "ISC"
+}
