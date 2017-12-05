@@ -4,13 +4,19 @@
 <head>
     <title>Pixi Benchmark</title>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+    <meta content="width=640" name="viewport">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="app-root"></div>
-    <script src="/node_modules/pixi.js/dist/pixi.js"></script>
-    <script src="/dist/bundle.js"></script>
+    <div id='fps' style="position: absolute; left: 0; right: 0; line-height: 1.5em; width: 60px; background: #000; color: #fff;"></div>
+    <script src="libs/pixi.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 const TEXTURE_COUNT = 100;
-const SPRITE_COUNT = 1000;
-const W_COUNT = 20;
+const SPRITE_COUNT = 2000;
+const W_COUNT = 40;
 const H_COUNT = 50;
 const W_WIDTH = 640;
 const H_HEIGHT = 1136;
@@ -39,7 +39,7 @@ class Main extends egret.DisplayObjectContainer {
         let bmps: egret.Bitmap[] = []
         for (let i = 0; i < SPRITE_COUNT; ++i) {
             let bmp = new egret.Bitmap(textures[i % TEXTURE_COUNT]);
-            bmp.width = bmp.height = 128;
+            bmp.width = bmp.height = 32;
             bmp.anchorOffsetX = bmp.width * 0.5;
             bmp.anchorOffsetY = bmp.height * 0.5;
             bmp.x = W_WIDTH / W_COUNT * (i % W_COUNT);
