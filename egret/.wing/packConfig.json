@@ -1,0 +1,9 @@
+{
+    "useClip": false,
+    "maxImageWidth": 2048,
+    "maxImageHeight": 2048,
+    "defaultResPath": "e:\\Codes\\webgl_2d_benchmark\\egret\\resource\\default.res.json",
+    "packGroups": {
+        "preload": true
+    }
+}
