@@ -1,6 +1,8 @@
 主流WebGL 2D渲染引擎性能评测
 ===
 
+[在线测试](k8w.github.io/webgl_2d_benchmark)
+
 # 测试方案
 
 ## 100纹理交错测试
