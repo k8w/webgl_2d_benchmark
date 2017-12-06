@@ -2,27 +2,17 @@
 ===
 
 # 结论
+- 对于本测试用例，Pixi.js > Layaair > Egret
+- Pixi.js和Layaair在优化上各有优势
+- Pixi.js支持单批次多纹理
+- Layaair支持运行时动态合并图集
+- 以上优化均未见于Egret
 
-性能方面：Pixi.js和Layaair各有优势，Pixi.js支持单批次多纹理，Layaair支持运行时动态合并图集。
-上述2点优化在白鹭均未见，白鹭性能不及前两者。
-
-## Pixi.js
-1. PC：60fps， iPhone6：
-1. 不支持运行时动态合并图集
-1. 支持单批次多纹理寄存器（取决于设备，最少8纹理，我的PC支持16纹理）
-1. Demo在不合图集的情况下，性能居然小胜Egret
-
-## Layaair
-1. PC：60fps， iPhone6：
-1. 支持运行时动态合并图集，大幅降低DrawCall
-1. 不支持单批次多纹理寄存器
-1. 虽然DrawCall大幅降低，但性能方面居然还略微低于Pixi.js
-
-## Egret
-1. PC：60fps， iPhone6：
-1. 不支持运行时动态合并图集
-1. 不支持单批次多纹理寄存器
-1. 性能弱于前两者
+| 引擎 | PC fps/drawcall | iPhone6 fps/drawcall | 运行时动态合并图集 | 单批次多纹理 |
+| --- | --- | --- | --- | --- |
+| Pixi.js | 60/125 | 33/250 | 无 | 有 |
+| Layaair | 33/70 | 25/70 | 有 | 无
+| Egret | 30/2000 | 15/2000 | 无 | 无
 
 # 测试方案
 
