@@ -86,7 +86,7 @@ var Main = (function (_super) {
         var bmps = [];
         for (var i = 0; i < SPRITE_COUNT; ++i) {
             var bmp = new egret.Bitmap(textures[i % TEXTURE_COUNT]);
-            bmp.width = bmp.height = 32;
+            bmp.width = bmp.height = 64;
             bmp.anchorOffsetX = bmp.width * 0.5;
             bmp.anchorOffsetY = bmp.height * 0.5;
             bmp.x = W_WIDTH / W_COUNT * (i % W_COUNT);
@@ -104,4 +104,30 @@ var Main = (function (_super) {
     return Main;
 }(egret.DisplayObjectContainer));
 __reflect(Main.prototype, "Main");
+//显示FPS
+var fpsCon = document.createElement('div');
+Object.assign(fpsCon.style, {
+    position: 'fixed',
+    background: '#000',
+    color: '#fff',
+    top: 0,
+    left: 0
+});
+document.body.appendChild(fpsCon);
+var arrFps = new Float64Array(10);
+var lastTime = Date.now();
+var pos = 0;
+function updateFps() {
+    var now = Date.now();
+    var delta = now - lastTime;
+    var fps = 1000 / delta;
+    arrFps[pos++] = fps;
+    if (pos >= arrFps.length) {
+        pos = 0;
+    }
+    fpsCon.innerHTML = 'FPS: ' + (arrFps.reduce(function (prev, next) { return prev + next; }) / arrFps.length | 0);
+    lastTime = now;
+    requestAnimationFrame(updateFps);
+}
+requestAnimationFrame(updateFps);
 //# sourceMappingURL=Main.js.map

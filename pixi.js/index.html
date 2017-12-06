@@ -4,17 +4,20 @@
 <head>
     <title>Pixi Benchmark</title>
     <meta charset="utf-8" />
-    <meta content="width=640" name="viewport">
+    <meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' />
     <style>
         *{
             margin: 0;
             padding: 0;
         }
+        canvas{
+            width: 376px !important;
+            height: 666px !important;
+        }
     </style>
 </head>
 
 <body>
-    <div id='fps' style="position: absolute; left: 0; right: 0; line-height: 1.5em; width: 60px; background: #000; color: #fff;"></div>
     <script src="libs/pixi.js"></script>
     <script src="index.js"></script>
 </body>

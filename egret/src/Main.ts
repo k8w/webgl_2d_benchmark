@@ -39,7 +39,7 @@ class Main extends egret.DisplayObjectContainer {
         let bmps: egret.Bitmap[] = []
         for (let i = 0; i < SPRITE_COUNT; ++i) {
             let bmp = new egret.Bitmap(textures[i % TEXTURE_COUNT]);
-            bmp.width = bmp.height = 32;
+            bmp.width = bmp.height = 64;
             bmp.anchorOffsetX = bmp.width * 0.5;
             bmp.anchorOffsetY = bmp.height * 0.5;
             bmp.x = W_WIDTH / W_COUNT * (i % W_COUNT);
@@ -55,3 +55,30 @@ class Main extends egret.DisplayObjectContainer {
         }, this);
     }
 }
+
+//显示FPS
+let fpsCon = document.createElement('div');
+Object.assign(fpsCon.style, {
+    position: 'fixed',
+    background: '#000',
+    color: '#fff',
+    top: 0,
+    left: 0
+})
+document.body.appendChild(fpsCon);
+let arrFps = new Float64Array(10);
+let lastTime = Date.now();
+let pos = 0;
+function updateFps() {
+    let now = Date.now();
+    let delta = now - lastTime;
+    let fps = 1000 / delta;
+    arrFps[pos++] = fps;
+    if (pos >= arrFps.length) {
+        pos = 0;
+    }
+    fpsCon.innerHTML = 'FPS: ' + (arrFps.reduce((prev, next) => prev + next) / arrFps.length | 0);
+    lastTime = now;
+    requestAnimationFrame(updateFps);
+}
+requestAnimationFrame(updateFps);
