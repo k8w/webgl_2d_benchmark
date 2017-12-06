@@ -15,7 +15,7 @@ document.body.appendChild(app.view);
 //Create Textures
 let textures = [];
 for (let i = 0; i < TEXTURE_COUNT; ++i) {
-    textures[i] = PIXI.Texture.fromImage('/assets/' + i + '.png');
+    textures[i] = PIXI.Texture.fromImage('../assets/' + i + '.png');
 }
 
 //Create Sprites

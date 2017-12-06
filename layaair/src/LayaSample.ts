@@ -16,7 +16,7 @@ class GameMain {
         for (let i = 0; i < SPRITE_COUNT; ++i) {
             let sprite = new Laya.Sprite();
             sprite.scale(0.25, 0.25);
-            sprite.loadImage('/assets/' + (i % TEXTURE_COUNT) + '.png');
+            sprite.loadImage('../../assets/' + (i % TEXTURE_COUNT) + '.png');
             sprite.pivot(128, 128);
             sprite.x = W_WIDTH / W_COUNT * (i % W_COUNT);
             sprite.y = H_HEIGHT / H_COUNT * (i / W_COUNT | 0);
