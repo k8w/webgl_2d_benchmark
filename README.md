@@ -23,9 +23,9 @@
 
 | 引擎 | PC fps/drawcall | iPhone6 fps/drawcall | 运行时动态合并图集 | 单批次多纹理 |
 | --- | --- | --- | --- | --- |
-| Pixi.js | 60/125 | 33/250 | 无 | 有 |
-| Layaair | 33/70 | 25/70 | 有 | 无
-| Egret | 30/2000 | 15/2000 | 无 | 无
+| Pixi.js | 60fps/125dc | 33fps/250dc | 无 | 有 |
+| Layaair | 33fps/70dc | 25fps/70dc | 有 | 无
+| Egret | 30fps/2000dc | 15fps/2000dc | 无 | 无
 
 # 几点猜测
 即便Egret在没有合并图集又没有使用多纹理寄存器的情况下，500 Draw Call在iPhone6上依旧可以跑到60fps。
